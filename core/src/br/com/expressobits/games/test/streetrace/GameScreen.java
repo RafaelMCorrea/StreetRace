@@ -86,9 +86,10 @@ public class GameScreen implements Screen, GestureListener {
 
 	@Override
 	public void resize(int width, int height) {
-		stage.setViewport(new StretchViewport(width, height));
+		StretchViewport viewport = new StretchViewport(width, height);
+		stage.setViewport(viewport);
 		
-		stage.getCamera().translate(stage.getWidth(),stage.getHeight(),0);
+		stage.getCamera().translate(viewport.getRightGutterWidth(),viewport.getBottomGutterHeight(),0);
 		
 
 	}
