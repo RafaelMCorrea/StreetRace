@@ -89,7 +89,7 @@ public class GameScreen implements Screen, GestureListener {
 		StretchViewport viewport = new StretchViewport(width, height);
 		stage.setViewport(viewport);
 		
-		stage.getCamera().translate(viewport.getRightGutterWidth(),viewport.getBottomGutterHeight(),0);
+		stage.getCamera().translate(stage.getWidth(),stage.getHeight(),0);
 		
 
 	}
